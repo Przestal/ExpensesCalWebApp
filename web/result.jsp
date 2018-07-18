@@ -12,14 +12,13 @@
     Connection conn;
     PreparedStatement pstm;
 
-
     try {
         Class.forName("org.postgresql.Driver");
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/calc", "postgres", "postgres");
-        pstm = conn.prepareStatement("INSERT INTO users (password, email) VALUES (?,?)");
+        pstm = conn.prepareStatement("INSERT INTO users (email,password) VALUES (?,?)");
 
-        pstm.setString(1, password);
-        pstm.setString(2, email);
+        pstm.setString(1, email);
+        pstm.setString(2, password);
         pstm.executeUpdate();
         pstm.close();
 
