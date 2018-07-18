@@ -79,47 +79,48 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <body>
+<form action="Login" method="get">
+    <nav class="w3-bar w3-black">
+        <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
+        <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
+        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
+        <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
 
-<nav class="w3-bar w3-black">
-    <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
-    <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-    <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
-    <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
-
-    <div class="bg-img">
-        <form action="/home.jsp">
-            <div class="container">
-                <font color="black"><h1>Login</h1></font>
+        <div class="bg-img">
+            <form action="/home.jsp">
+                <div class="container">
+                    <font color="black"><h1>Login</h1></font>
 
 
-                <label for="email"><font color="black"><b>Email</b></font></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                    <label for="email"><font color="black"><b>Email</b></font></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label for="psw"><font color="black"><b>Password</b></font>
-                </label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw"><font color="black"><b>Password</b></font>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit" class="btn">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"><font color="black">Remember me</font>
-                </label>
-            </div>
-        </form>
+                    <button type="submit" class="btn">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"><font color="black">Remember me</font>
+                    </label>
+                </div>
+            </form>
 
-    </div>
-    <center>
-        <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-            <a href="#"><i class="fa fa-facebook-official"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-flickr"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <p class="w3-medium">
-                Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
-                                                     target="_blank">w3.css</a>
-            </p>
-        </footer>
-    </center>
-</nav>
+        </div>
+        <center>
+            <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-flickr"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <p class="w3-medium">
+                    Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
+                                                         target="_blank">w3.css</a>
+                </p>
+            </footer>
+        </center>
+    </nav>
+</form>
 </body>
 </html>

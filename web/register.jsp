@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Register</title>
@@ -85,7 +86,7 @@
     }
 
     button:hover {
-        opacity:1;
+        opacity: 1;
     }
 
     /* Extra styles for the cancel button */
@@ -129,26 +130,25 @@
 
 <body>
 
-<nav class="w3-bar w3-black">
-    <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
-    <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-    <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
-    <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
+<form name="reg" method="get" action="result.jsp">
+    <nav class="w3-bar w3-black">
+        <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
+        <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
+        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
+        <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
 
-    <div class="bg-img">
-        <form action="">
+        <div class="bg-img">
             <div class="container">
                 <font color="black"><h1>Sign up</h1></font>
 
-
-                <label for="email"><font color="black"><b>Email</b></font></label>
+                <label ><font color="black"><b>Email</b></font></label>
                 <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label for="password"><font color="black"><b>Password</b></font>
+                <label>><font color="black"><b>Password</b></font>
                 </label>
                 <input type="password" placeholder="Enter Password" name="password" required>
 
-                <label for="psw-repeat"><font color="black"><b>Repeat Password</b></font></label>
+                <label><font color="black"><b>Repeat Password</b></font></label>
                 <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
                 <label>
@@ -156,28 +156,34 @@
                     <font color="black"> Remember me</font>
                 </label>
 
-                <font color="black"> <p>By creating an account you agree to our</font> <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <font color="black"><p>By creating an account you agree to our</font> <a href="#"
+                                                                                         style="color:dodgerblue">Terms
+                & Privacy</a>.</p>
 
                 <div class="clearfix">
                     <button type="button" class="cancelbtn">Cancel</button>
                     <button type="submit" class="signupbtn">Sign Up</button>
                 </div>
             </div>
-        </form>
-    </div>
-    <center>
-        <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-            <a href="#"><i class="fa fa-facebook-official"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-flickr"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <p class="w3-medium">
-                Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
-                                                     target="_blank">w3.css</a>
-            </p>
-        </footer>
-    </center>
-</nav>
+
+
+        </div>
+        <center>
+            <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-flickr"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <p class="w3-medium">
+                    Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
+                                                         target="_blank">w3.css</a>
+                </p>
+            </footer>
+        </center>
+
+    </nav>
+</form>
 </body>
+
 </html>
