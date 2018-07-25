@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@page import="java.sql.*" %>
 <html>
 <head>
     <title>Register</title>
@@ -130,7 +130,7 @@
 
 <body>
 
-<form name="reg" method="get" action="result.jsp">
+<form>
     <nav class="w3-bar w3-black">
         <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
         <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
@@ -149,7 +149,10 @@
                 <input type="password" placeholder="Enter Password" name="password" required>
 
                 <label><font color="black"><b>Repeat Password</b></font></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required
+                       onchange="this.setCustomValidity(this.validity.patternMismatch ?
+                       'Must have at least 6 characters' : '');
+                       if(this.checkValidity()) form.password.pattern = this.value();" >
 
                 <label>
                     <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
@@ -162,8 +165,10 @@
 
                 <div class="clearfix">
                     <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                    <button onclick="congratulation" type="submit" class="signupbtn">Sign Up</button>
                 </div>
+                <p id="cong"></p>
+
             </div>
 
 

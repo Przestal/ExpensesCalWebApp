@@ -79,7 +79,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <body>
-<form action="Login" method="get">
+
+<form action="Login" method="post" onsubmit="myFunction()">
     <nav class="w3-bar w3-black">
         <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
         <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
@@ -87,24 +88,22 @@
         <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
 
         <div class="bg-img">
-            <form action="/home.jsp">
                 <div class="container">
                     <font color="black"><h1>Login</h1></font>
 
 
-                    <label for="email"><font color="black"><b>Email</b></font></label>
+                    <label ><font color="black"><b>Email</b></font></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
 
-                    <label for="psw"><font color="black"><b>Password</b></font>
+                    <label ><font color="black"><b>Password</b></font>
                     </label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" placeholder="Enter Password" name="password" required>
 
                     <button type="submit" class="btn">Login</button>
                     <label>
                         <input type="checkbox" checked="checked" name="remember"><font color="black">Remember me</font>
                     </label>
                 </div>
-            </form>
 
         </div>
         <center>
