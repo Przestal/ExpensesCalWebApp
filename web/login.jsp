@@ -80,7 +80,7 @@
 
 <body>
 
-<form action="Login" method="post" onsubmit="myFunction()">
+<form action="Login" method="post">
     <nav class="w3-bar w3-black">
         <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
         <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
