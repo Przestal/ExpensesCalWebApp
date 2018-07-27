@@ -18,21 +18,24 @@ public class RegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("psw-repeat");
 
+        if (password.equals(passwordRepeat)) {
+            RegisterBean registerBean = new RegisterBean();
+            registerBean.setEmail(email);
+            registerBean.setPassword(password);
+            registerBean.setPasswordRepeat(passwordRepeat);
 
-        RegisterBean registerBean = new RegisterBean();
-        registerBean.setEmail(email);
-        registerBean.setPassword(password);
-        registerBean.setPasswordRepeat(passwordRepeat);
+            RegisterDao registerDao = new RegisterDao();
+            String createUsers = registerDao.createUser(registerBean);
 
-        RegisterDao registerDao = new RegisterDao();
-        String createUsers = registerDao.createUserIfNotExist(registerBean);
+            if (createUsers.equals("SUCCESS")) {
+                req.getRequestDispatcher("/login.jsp").forward(req, resp);
+            } else if (createUsers.equals("FAILED")) {
 
-        if (createUsers.equals("SUCCESS")){
-        req.getRequestDispatcher("/registrationUser.jsp").forward(req,resp);
-        }else if (createUsers.equals("FAILED")){
+                req.getRequestDispatcher("/register.jsp").forward(req, resp);
+            }
+        } else {
             req.getRequestDispatcher("/register.jsp").forward(req,resp);
-        }else {
-            req.getRequestDispatcher("/home.jsp").forward(req,resp);
+
         }
     }
 }
