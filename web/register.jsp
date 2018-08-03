@@ -28,7 +28,7 @@
         min-height: 100%;
 
         /* Center and scale the image nicely */
-        background-position: center center;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
@@ -129,66 +129,43 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <body>
-
+<%@include file="header/header.jsp" %>
+<%@include file="nav/nav.jsp" %>
 <form action="RegisterUser" method="post">
-    <nav class="w3-bar w3-black">
-        <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
-        <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
-        <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
+    <div class="bg-img">
+        <div class="container">
+            <font color="black"><h1>Sign up</h1></font>
 
-        <div class="bg-img">
-            <div class="container">
-                <font color="black"><h1>Sign up</h1></font>
+            <label><font color="black"><b>Email</b></font></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label ><font color="black"><b>Email</b></font></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+            <label><font color="black"><b>Password</b></font>
+            </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
-                <label>><font color="black"><b>Password</b></font>
-                </label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+            <label><font color="black"><b>Repeat Password</b></font></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                <font color="black"> Remember me</font>
+            </label>
 
-                <label><font color="black"><b>Repeat Password</b></font></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required
-                       onchange="this.setCustomValidity(this.validity.patternMismatch ?
-                       'Must have at least 6 characters' : '');
-                       if(this.checkValidity()) form.password.pattern = this.value();" >
+            <font color="black"><p>By creating an account you agree to our</font> <a href="#"
+                                                                                     style="color:dodgerblue">Terms
+            & Privacy</a>.</p>
 
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-                    <font color="black"> Remember me</font>
-                </label>
-
-                <font color="black"><p>By creating an account you agree to our</font> <a href="#"
-                                                                                         style="color:dodgerblue">Terms
-                & Privacy</a>.</p>
-
-                <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button onclick="congratulation" type="submit" class="signupbtn">Sign Up</button>
-                </div>
-                <p id="cong"></p>
-
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button onclick="congratulation" type="submit" class="signupbtn">Sign Up</button>
             </div>
-
+            <p id="cong"></p>
 
         </div>
-        <center>
-            <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-                <a href="#"><i class="fa fa-facebook-official"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-flickr"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <p class="w3-medium">
-                    Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
-                                                         target="_blank">w3.css</a>
-                </p>
-            </footer>
-        </center>
 
-    </nav>
+
+    </div>
 </form>
+<%@include file="footer/footer.jsp" %>
 </body>
 
 </html>

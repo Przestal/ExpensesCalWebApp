@@ -15,11 +15,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <body>
-<nav class="w3-bar w3-black">
-  <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
-  <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-  <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
-  <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
+<%@include file="header/header.jsp"%>
+<%@include file="nav/nav.jsp"%>
 
   <section>
     <img src="images/calculator.jpg" style="height: 100%;width: 100%">
@@ -31,18 +28,7 @@
     <p class="w3-opacity"><i>We know what is costs</i></p>
     <p class="w3-justify"><i>       Page created for help people managed their bills</i></p>
   </section>
-
-  <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-    <a href="#"><i class="fa fa-facebook-official"></i></a>
-    <a href="#"><i class="fa fa-pinterest-p"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-flickr"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <p class="w3-medium">
-      Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </p>
-  </footer>
-
+<%@include file="footer/footer.jsp"%>
 </nav>
 </body>
 </html>

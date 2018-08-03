@@ -1,4 +1,4 @@
-package com.przestal.util;
+package com.przestal.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

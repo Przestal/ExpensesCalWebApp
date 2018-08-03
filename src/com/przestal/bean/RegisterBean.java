@@ -1,6 +1,8 @@
 package com.przestal.bean;
 
-public class RegisterBean {
+import java.io.Serializable;
+
+public class RegisterBean implements Serializable{
 
     private String email;
     private String password;

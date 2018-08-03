@@ -1,7 +1,7 @@
 package com.przestal.dao;
 
 import com.przestal.bean.LoginBean;
-import com.przestal.util.DBConnection;
+import com.przestal.db.DBConnection;
 
 import java.sql.*;
 

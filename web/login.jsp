@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.przestal.controller.LoginServlet" %><%--
   Created by IntelliJ IDEA.
   User: przemyslaw
   Date: 13.07.18
@@ -79,47 +79,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <body>
+<%@ include file="header/header.jsp"%>
+<%@ include file="nav/nav.jsp"%>
 
+<section>
+    <img src="images/homeCalc.jpg" style="height: 100% ;width: 100%">
+    <%--<img src="images/homeCalc.jpg" style="width:100%">
+    <img src="images/logo.jpg" style="width:100%">--%>
+</section>
 <form action="Login" method="post">
-    <nav class="w3-bar w3-black">
-        <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
-        <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
-        <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
-
-        <div class="bg-img">
-                <div class="container">
-                    <font color="black"><h1>Login</h1></font>
 
 
-                    <label ><font color="black"><b>Email</b></font></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+            <div class="container">
+                <font color="black"><h1>Login</h1></font>
 
-                    <label ><font color="black"><b>Password</b></font>
-                    </label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
 
-                    <button type="submit" class="btn">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"><font color="black">Remember me</font>
-                    </label>
-                </div>
+                <label><font color="black"><b>Email</b></font></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
 
+                <label><font color="black"><b>Password</b></font>
+                </label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <button type="submit" class="btn">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"><font color="black">Remember me</font>
+                </label>
+            </div>
         </div>
-        <center>
-            <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-                <a href="#"><i class="fa fa-facebook-official"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-flickr"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <p class="w3-medium">
-                    Created by Przemysław Gębala with <a href="https://www.w3schools.com/w3css/default.asp"
-                                                         target="_blank">w3.css</a>
-                </p>
-            </footer>
-        </center>
     </nav>
 </form>
+<%@include file="footer/footer.jsp"%>
 </body>
 </html>
