@@ -2,14 +2,14 @@ package com.przestal.bean;
 
 import java.io.Serializable;
 
-public class CreateTableBean implements Serializable{
+public class CreateTableDBBean implements Serializable{
 
 
     private String name;
     private int value;
     private int sum;
 
-    public CreateTableBean() {
+    public CreateTableDBBean() {
     }
 
     public String getName() {

@@ -1,13 +1,13 @@
 package com.przestal.dao;
 
-import com.przestal.bean.CreateTableBean;
+import com.przestal.bean.CreateTableDBBean;
 import com.przestal.db.DBConnection;
 
 import java.sql.*;
 
-public class CreateTableDao {
+public class CreateTableDBDao {
 
-    public String createTable(CreateTableBean ctb) {
+    public String createTable(CreateTableDBBean ctb) {
 
         String name = ctb.getName();
         Connection conn = null;

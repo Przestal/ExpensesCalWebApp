@@ -78,6 +78,9 @@
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -85,59 +88,26 @@
 <%@ include file="header/header.jsp" %>
 <%@ include file="nav/nav.jsp" %>
 
-    <div class="w3-col l10 m12" id="main" style="overflow-x: scroll" contenteditable="true">
-        <table class="w3-table-all">
-            <thead>
-            <tr class="w3-green">
-                <th>Year/Month</th>
-                <th>Jedzenie</th>
-                <th>AGD</th>
-                <th>Taca</th>
-                <th>Bilety</th>
-                <th>Inne</th>
-                <th>Rozrywka</th>
-                <th>Fryzjer</th>
-                <th>Kolęda</th>
-                <th>Kredyt</th>
-                <th>Telefon</th>
-                <th>Dieta</th>
-                <th>Sport</th>
-                <th>Pokój</th>
-                <th>Prezenty</th>
-                <th>KKM</th>
-                <th>Internet</th>
-                <th>Jałmużna</th>
-                <th>Dziesięcina</th>
-                <th>Śr. Czystości</th>
-                <th>Leki</th>
-            </tr>
-            <tr>
-                <td>2018/08</td>
-                <td>562,26</td>
-                <td>262,02</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-            </tr>
+<div class="w3-col l10 m12" id="main" style="overflow: scroll" contenteditable="false">
+    <table class="w3-table-all">
+        <thead>
+        <tr class="w3-green">
+            <th>Year/Month</th>
+            <th>Jedzenie</th>
+        </tr>
+        <tr>
+            <td>2018/08</td>
+            <td>
+                526,06
+                <a href="">
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                </a>
+            </td>
+        </tr>
 
-            </thead>
-        </table>
-    </div>
+        </thead>
+    </table>
+</div>
 <%--</div>--%>
 <%--<form action="/CreateTable" method="post">--%>
 

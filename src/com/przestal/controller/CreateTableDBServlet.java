@@ -1,7 +1,7 @@
 package com.przestal.controller;
 
-import com.przestal.bean.CreateTableBean;
-import com.przestal.dao.CreateTableDao;
+import com.przestal.bean.CreateTableDBBean;
+import com.przestal.dao.CreateTableDBDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class CreateTableServlet extends HttpServlet{
+public class CreateTableDBServlet extends HttpServlet{
 
 
     @Override
@@ -17,10 +17,10 @@ public class CreateTableServlet extends HttpServlet{
 
         String name = req.getParameter("name");
 
-        CreateTableBean ctb = new CreateTableBean();
+        CreateTableDBBean ctb = new CreateTableDBBean();
         ctb.setName(name);
 
-        CreateTableDao ctd = new CreateTableDao();
+        CreateTableDBDao ctd = new CreateTableDBDao();
         String createTable = ctd.createTable(ctb);
 
         if (createTable.equals("CREATE")){

@@ -29,7 +29,7 @@
 
     <servlet>
         <servlet-name>createTable</servlet-name>
-        <servlet-class>com.przestal.controller.CreateTableServlet</servlet-class>
+        <servlet-class>com.przestal.controller.CreateTableDBServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>createTable</servlet-name>
