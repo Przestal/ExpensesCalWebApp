@@ -35,6 +35,12 @@
         <servlet-name>createTable</servlet-name>
         <url-pattern>/CreateTable</url-pattern>
     </servlet-mapping>
-
-
+    <servlet>
+        <servlet-name>addValue</servlet-name>
+        <servlet-class>com.przestal.controller.AddValueToRowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addValue</servlet-name>
+        <url-pattern>/AddValue</url-pattern>
+    </servlet-mapping>
 </web-app>

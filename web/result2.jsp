@@ -38,7 +38,7 @@
 
     /* Full-width input fields */
     input[type=text], input[type=password] {
-        width: 10%;
+        width: auto;
         padding: 15px;
         margin: 5px 0 22px 0;
         border: none;
@@ -98,13 +98,11 @@
             <td>2018/08</td>
             <td>
 
-                <a href="">
-                    <span class="glyphicon glyphicon-minus-sign"></span>
-                </a>
                 <% session.getAttribute("sum");%>
-                <a href="/result2.jsp">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                </a>
+                <form action="/AddValue" method="post">
+                <input type="text" placeholder="Enter value" name="value">
+                <button type="submit" name="enterValue">Ok</button>
+                </form>
             </td>
         </tr>
 

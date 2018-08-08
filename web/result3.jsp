@@ -1,3 +1,4 @@
+<%@ page import="com.przestal.bean.SumValueBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -38,7 +39,7 @@
 
     /* Full-width input fields */
     input[type=text], input[type=password] {
-        width: 10%;
+        width: auto;
         padding: 15px;
         margin: 5px 0 22px 0;
         border: none;
@@ -98,13 +99,9 @@
             <td>2018/08</td>
             <td>
 
-                <a href="">
-                    <span class="glyphicon glyphicon-minus-sign"></span>
-                </a>
-                <% session.getAttribute("sum");%>
-                <a href="/result2.jsp">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                </a>
+                <%=
+                session.getAttribute("sum")
+                %>
             </td>
         </tr>
 
