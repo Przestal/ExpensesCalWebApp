@@ -1,4 +1,3 @@
-<%@ page import="com.przestal.bean.SumValueBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -98,14 +97,12 @@
         <tr>
             <td>2018/08</td>
             <td>
-                <a href="/subtractValue.jsp">
-                    <span class="glyphicon glyphicon-minus-sign"></span>
-                </a>
-                <%=
-                session.getAttribute("sum")%>
-                <a href="/addValue.jsp">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                </a>
+
+                <%= session.getAttribute("sum")%>
+                <form action="/AddValue" method="post">
+                <input type="text" placeholder="Enter value" name="value">
+                <button type="submit" name="enterValue">Ok</button>
+                </form>
             </td>
         </tr>
 

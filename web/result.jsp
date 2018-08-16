@@ -1,3 +1,4 @@
+<%@ page import="com.przestal.dao.AddValueDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -98,11 +99,13 @@
             <td>2018/08</td>
             <td>
 
-                <a href="">
+                <a href="/subtractValue.jsp">
                     <span class="glyphicon glyphicon-minus-sign"></span>
                 </a>
-                <% session.getAttribute("sum");%>
-                <a href="/result2.jsp">
+
+                <%=session.getAttribute("sum")%>
+
+                <a href="/addValue.jsp">
                     <span class="glyphicon glyphicon-plus-sign"></span>
                 </a>
             </td>

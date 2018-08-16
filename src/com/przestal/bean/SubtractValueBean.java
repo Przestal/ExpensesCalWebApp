@@ -1,17 +1,14 @@
 package com.przestal.bean;
 
-import java.text.DecimalFormat;
-
-public class AddValueBean {
-
+public class SubtractValueBean {
 
     private String value;
 
-    public AddValueBean() {
+    public SubtractValueBean() {
     }
 
     public String getValue() {
-       return value;
+        return "-"+value;
     }
 
     public void setValue(String value) {

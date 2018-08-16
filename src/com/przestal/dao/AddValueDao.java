@@ -13,6 +13,7 @@ public class AddValueDao {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     Double result = null;
+
     public void addValueToTableDB(AddValueBean addValueBean) {
 
         try {
@@ -26,21 +27,30 @@ public class AddValueDao {
         }
 
     }
-    public Double getSumOfColumnValues(SumValueBean sumValueBean) {
+
+    public String getSumOfColumnValues() {
 
         try {
             connection = DBConnection.createConnection();
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT SUM (CAST (food AS DOUBLE PRECISION )) FROM costsvalue;");
-            while (resultSet.next()){
+            resultSet = statement.executeQuery("SELECT SUM (CAST (food AS FLOAT (2))) FROM costsvalue;");
+            while (resultSet.next()) {
                 result = resultSet.getDouble(1);
                 statement = connection.createStatement();
-                preparedStatement= connection.prepareStatement("UPDATE sumvalue SET food =  "+result+";");
-                preparedStatement.executeUpdate();
+                resultSet = statement.executeQuery("SELECT * FROM sumvalue");
+                if (resultSet.next()) {
+                    preparedStatement = connection.prepareStatement("UPDATE sumvalue SET food =  " + result + ";");
+                    preparedStatement.executeUpdate();
+                } else {
+                    statement.execute("INSERT INTO sumvalue VALUES (0)");
+
+                    preparedStatement = connection.prepareStatement("UPDATE sumvalue SET food =  " + result + ";");
+                    preparedStatement.executeUpdate();
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return result;
+        return String.format("%.2f",result);
     }
 }

@@ -1,16 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
   User: przemyslaw
-  Date: 28.07.18
-  Time: 11:49
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title><%--
-  Created by IntelliJ IDEA.
-  User: przemyslaw
   Date: 13.07.18
   Time: 09:27
   To change this template use File | Settings | File Templates.
@@ -33,7 +23,7 @@
 
             .bg-img {
                 /* The image used */
-                background-image: url("images/Expenses.jpg");
+                background-image: url("../images/Expenses.jpg");
 
                 min-height: 100%;
 
@@ -140,24 +130,23 @@
 
 <body>
 
-<form action="login.jsp" method="post">
+<form action="/registrationFiles/register.jsp" method="post">
     <nav class="w3-bar w3-black">
         <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
         <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
+        <a href="/registrationFiles/register.jsp" class="w3-button w3-bar-item">Register</a>
         <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
 
         <div class="bg-img">
             <div class="container">
                 <center>
-                <font color="black"><h1>Congratulation!</h1></font>
-                <font color="black"><h5>Account created successfully</h5></font>
-               </center>
-                <div class="clearfix">
-                    <button type="submit">Login</button>
-                </div>
-                <p id="cong"></p>
+                    <font color="black"><h5>Password should be the same</h5></font>
 
+                    <div class="clearfix">
+                        <button type="submit">Back to registration</button>
+                    </div>
+                    <p id="cong"></p>
+                </center>
             </div>
 
 
@@ -178,3 +167,4 @@
 
     </nav>
 </form>
+</body>

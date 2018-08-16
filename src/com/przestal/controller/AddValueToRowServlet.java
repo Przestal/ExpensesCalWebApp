@@ -26,7 +26,7 @@ public class AddValueToRowServlet extends HttpServlet {
         valueDao.addValueToTableDB(addVB);
 
         SumValueBean sumValueBean = new SumValueBean();
-        Double sum =valueDao.getSumOfColumnValues(sumValueBean);
+        String sum = valueDao.getSumOfColumnValues();
 
         HttpSession session = req.getSession();
         session.setAttribute("sum",sum);

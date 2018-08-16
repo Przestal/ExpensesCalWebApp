@@ -43,4 +43,14 @@
         <servlet-name>addValue</servlet-name>
         <url-pattern>/AddValue</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>subtractValue</servlet-name>
+        <servlet-class>com.przestal.controller.SubtractValueToRowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>subtractValue</servlet-name>
+        <url-pattern>/SubtractValue</url-pattern>
+    </servlet-mapping>
+
 </web-app>

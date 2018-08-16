@@ -23,7 +23,7 @@
 
     .bg-img {
         /* The image used */
-        background-image: url("images/Expenses.jpg");
+        background-image: url("../images/Expenses.jpg");
 
         min-height: 100%;
 
@@ -130,11 +130,11 @@
 
 <body>
 
-<form action="/register.jsp" method="post">
+<form action="/registrationFiles/register.jsp" method="post">
     <nav class="w3-bar w3-black">
         <a href="/home.jsp" class="w3-button w3-bar-item">Home</a>
         <a href="/login.jsp" class="w3-button w3-bar-item">Login</a>
-        <a href="/register.jsp" class="w3-button w3-bar-item">Register</a>
+        <a href="/registrationFiles/register.jsp" class="w3-button w3-bar-item">Register</a>
         <a href="/contact.jsp" class="w3-button w3-bar-item">Contact</a>
 
         <div class="bg-img">
