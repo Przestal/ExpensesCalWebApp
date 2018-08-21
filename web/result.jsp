@@ -89,6 +89,7 @@
 <%
     VerifyUserLoginStatus vuls = new VerifyUserLoginStatus();
     vuls.verifyLoginStatus(session,response);
+    vuls.addCacheControl(response);
     /*if (session.getAttribute("email")==null){
     response.sendRedirect("/login.jsp");
 }*/

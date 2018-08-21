@@ -88,6 +88,7 @@
 <%
     VerifyUserLoginStatus status = new VerifyUserLoginStatus();
     status.verifyLoginStatus(session,response);
+    status.addCacheControl(response);
 %>
 
 <%@ include file="header/header.jsp" %>
