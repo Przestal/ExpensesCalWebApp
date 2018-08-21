@@ -32,8 +32,9 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("email", email);
             request.getRequestDispatcher("/result.jsp").forward(request,response);
         }else {
-            request.setAttribute("errMessage", userValidate);
-            request.getRequestDispatcher("/login.jsp").forward(request,response);
+
+            response.sendRedirect("/login.jsp");
+            //request.getRequestDispatcher("/login.jsp").forward(request,response);
         }
 
     }

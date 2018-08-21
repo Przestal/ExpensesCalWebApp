@@ -87,7 +87,7 @@
     <%--<img src="images/homeCalc.jpg" style="width:100%">
     <img src="images/logo.jpg" style="width:100%">--%>
 </section>
-<form action="Login" method="post">
+<form action="/login" method="post">
 
 
             <div class="container">

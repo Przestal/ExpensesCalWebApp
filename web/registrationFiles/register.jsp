@@ -1,16 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: przemyslaw
-  Date: 13.07.18
-  Time: 09:27
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.sql.*" %>
 <html>
-<head>
-    <title>Register</title>
-</head>
 <style>
     body, html {
         height: 100%;
@@ -23,7 +13,7 @@
 
     .bg-img {
         /* The image used */
-        background-image: url("images/Expenses.jpg");
+        background-image: url("/images/Expenses.jpg");
 
         min-height: 100%;
 
@@ -129,9 +119,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <body>
-<%@include file="header/header.jsp" %>
-<%@include file="nav/nav.jsp" %>
-<form action="RegisterUser" method="post">
+<%@include file="/header/header.jsp" %>
+<%@include file="/nav/nav.jsp" %>
+<form action="/registerUser" method="post">
     <div class="bg-img">
         <div class="container">
             <font color="black"><h1>Sign up</h1></font>
@@ -165,7 +155,6 @@
 
     </div>
 </form>
-<%@include file="footer/footer.jsp" %>
+<%@include file="/footer/footer.jsp" %>
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+<%@ page import="com.przestal.helper.VerifyUserLoginStatus" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -84,8 +85,13 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
+<%
+    VerifyUserLoginStatus status = new VerifyUserLoginStatus();
+    status.verifyLoginStatus(session,response);
+%>
+
 <%@ include file="header/header.jsp" %>
-<%@ include file="nav/nav.jsp" %>
+<%@ include file="nav/navLogged.jsp" %>
 
 <div class="w3-col l10 m12" id="main" style="overflow: scroll" contenteditable="false">
     <table class="w3-table-all">
@@ -99,7 +105,7 @@
             <td>
 
                 <%= session.getAttribute("sum")%>
-                <form action="/SubtractValue" method="post">
+                <form action="/subtractValue" method="post">
                 <input type="text" placeholder="Enter value" name="value">
                 <button type="submit" name="enterValue">Ok</button>
                 </form>
